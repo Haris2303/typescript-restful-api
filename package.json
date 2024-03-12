@@ -1,10 +1,12 @@
 {
   "name": "belajar-typescript-restful-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Belajar TypeScript restful api",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc",
+    "start": "node dist/main.js"
   },
   "jest": {
     "transform": {
@@ -13,7 +15,7 @@
   },
   "author": "Haris",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "@prisma/client": "^5.10.2",
     "bcrypt": "^5.1.1",
