@@ -1,0 +1,145 @@
+### Register User
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "otong",
+    "password": "otong123",
+    "name": "Otong Surotong"
+}
+
+### Login User
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "otong",
+    "password": "otong123"
+}
+
+### Get User
+GET  http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+### Logout User
+DELETE  http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+### Update User name
+PATCH  http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+{
+    "name": "Otong Tamvan"
+}
+
+### Update User password
+PATCH  http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+{
+    "password": "passbaru"
+}
+
+
+### Create Contact
+POST  http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+{
+    "first_name": "Maling",
+    "last_name": "Kundang",
+    "email": "malkun@gmail.com",
+    "phone": "081123"
+}
+
+### Update Contact
+PUT  http://localhost:3000/api/contacts/101
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+{
+    "first_name": "Ucup Marjan",
+    "last_name": "Surucup",
+    "email": "ucup@gmail.com",
+    "phone": "08123421"
+}
+
+### Get Contact
+GET  http://localhost:3000/api/contacts/101
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+### Remove Contact
+Delete  http://localhost:3000/api/contacts/101
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+### Search Contact
+GET  http://localhost:3000/api/contacts?name=mal
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+
+### Create Address
+POST  http://localhost:3000/api/contacts/103/addresses
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+{
+    "street": "Jalan B",
+    "city": "Kota B",
+    "province": "Kota B",
+    "country": "Indonesia",
+    "postal_code": "1324"
+}
+
+### Get Address
+GET  http://localhost:3000/api/contacts/103/addresses/47
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+
+### Update Address
+PUT  http://localhost:3000/api/contacts/103/addresses/47
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+{
+    "street": "Jalan A",
+    "city": "Kota A",
+    "province": "Kota A",
+    "country": "Singapura",
+    "postal_code": "53421"
+}
+
+### List Address
+GET  http://localhost:3000/api/contacts/103/addresses
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
+
+### Remove Address
+DELETE  http://localhost:3000/api/contacts/103/addresses/47
+Content-Type: application/json
+Accept: application/json
+X-API-token: 32f35320-23ce-4f14-951f-32bcea1e1e6e
