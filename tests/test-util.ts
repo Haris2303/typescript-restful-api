@@ -83,4 +83,34 @@ export class AddressTest {
       },
     });
   }
+
+  static async create() {
+    const contact = await ContactTest.get();
+    await prismaClient.address.create({
+      data: {
+        contact_id: contact.id,
+        street: "Jalan test",
+        city: "Kota test",
+        province: "Provinsi test",
+        country: "Indonesia",
+        postal_code: "1234",
+      },
+    });
+  }
+
+  static async get() {
+    const address = await prismaClient.address.findFirst({
+      where: {
+        contact: {
+          username: "test",
+        },
+      },
+    });
+
+    if (!address) {
+      throw new Error("address is not found");
+    }
+
+    return address;
+  }
 }
